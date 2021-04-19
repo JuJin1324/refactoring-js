@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const invoice = require('../invoice');
+const invoice = require('../statement');
 
 describe('statement', () => {
     before(() => {
