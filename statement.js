@@ -55,13 +55,21 @@ const statement = (invoice, plays) => {
         return volumeCredits;
     };
 
-    let totalAmount = 0;
+    const totalAmount = performances => {
+        let result = 0;
+        performances.forEach(perf => {
+            result += amountFor(perf);
+        });
+
+        return result;
+    };
+
+    /* TODO: P.52 부터 */
     invoice.performances.forEach(perf => {
         /* 청구 내역 출력 */
         result += `${playFor(perf).name}: ${usd(amountFor(perf))} (${perf.audience}석)\n`;
-        totalAmount += amountFor(perf);
     });
-    result += `총액: ${usd(totalAmount / 100)}\n`;
+    result += `총액: ${usd(totalAmount(invoice.performances))}\n`;
     result += `적립 포인트: ${totalVolumeCredits(invoice.performances)}점\n`;
 
     return result;
