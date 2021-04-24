@@ -2,9 +2,9 @@
   "name": "refactoring",
   "version": "1.0.0",
   "description": "Practice for Refactoring",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node app.js",
     "test": "echo \\\\\\\"Error: no tests specified\\\\\\\" && exit 1"
   },
   "author": "Yoo Ju-Jin",
