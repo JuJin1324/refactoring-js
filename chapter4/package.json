@@ -4,8 +4,13 @@
   "description": "Practice for chapter4",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "node_modules/mocha/bin/mocha $(find . -name '*.spec.js') --recursive"
   },
   "author": "Yoo Ju-Jin",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.3",
+    "mocha": "^8.3.0"
+  }
 }
